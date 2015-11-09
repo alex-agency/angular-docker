@@ -15,14 +15,19 @@ ENV HOME /home/user
 
 # Install lib dependencies
 RUN apt-get -yq update && \
-    apt-get -yq install bzip2 libfreetype6 libfontconfig && \
+    apt-get -yq install xdg-utils bzip2 libfreetype6 libfontconfig && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Install apps
-RUN npm install -g yo grunt-cli bower karma-cli \
-		generator-karma generator-angular && \
-	npm install phantomjs jasmine-core karma --save-dev \
-		karma-phantomjs-launcher --save-dev karma-jasmine --save-dev && \
+RUN npm install -g yo gulp grunt-cli bower python phantomjs \
+        jasmine-core karma-cli karma-phantomjs-launcher --save-dev \
+        karma-jasmine --save-dev node-pre-gyp && \
+    npm install karma --save-dev && \
+    rm -rf ~/.npm && npm cache clear
+
+# Install generators
+RUN npm install -g generator-karma generator-angular \
+        generator-angular-fullstack generator-gulp-angular  && \
     rm -rf ~/.npm && npm cache clear
 
 # Set app dir
@@ -33,7 +38,7 @@ WORKDIR /app
 USER user
 
 # Expose the port
-EXPOSE 9000
+EXPOSE 9000 3000 3001
 
 # Open bash by default
 CMD /bin/bash
