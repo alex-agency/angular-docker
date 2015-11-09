@@ -45,6 +45,11 @@ yo angular
 yo angular-fullstack
 ```
 
+[ngBoilerplate generator](https://github.com/thardy/generator-ngbp):
+```
+yo ngbp
+```
+
 [AngularJS with GulpJS](https://github.com/Swiip/generator-gulp-angular):
 ```
 yo gulp-angular
@@ -58,7 +63,7 @@ Check generated project:
 
 Build:
 
-AngularJS Oficial and AngularJS Full-Stack:
+AngularJS Oficial, AngularJS Full-Stack and ngBoilerplate:
 ```
 grunt build --force
 ```
@@ -70,7 +75,7 @@ gulp build
 
 Run unit tests:
 
-AngularJS Oficial and AngularJS Full-Stack:
+AngularJS Oficial, AngularJS Full-Stack and ngBoilerplate:
 ```
 grunt test
 ```
@@ -82,7 +87,7 @@ gulp test
 
 Compile and launch:
 
-AngularJS Oficial and AngularJS Full-Stack:
+AngularJS Oficial, AngularJS Full-Stack and ngBoilerplate:
 ```
 sed -i s/localhost/0.0.0.0/g Gruntfile.js
 grunt serve --force
@@ -95,7 +100,7 @@ gulp serve
 
 Browse to Angular webapp:
 
-AngularJS Oficial and AngularJS Full-Stack:
+AngularJS Oficial, AngularJS Full-Stack and ngBoilerplate:
 ```
 http://<virtual machine ip>:9000/
 ```

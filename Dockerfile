@@ -26,8 +26,8 @@ RUN npm install -g yo gulp grunt-cli bower python phantomjs \
     rm -rf ~/.npm && npm cache clear
 
 # Install generators
-RUN npm install -g generator-karma generator-angular \
-        generator-angular-fullstack generator-gulp-angular  && \
+RUN npm install -g generator-karma generator-ngbp generator-angular \
+        generator-angular-fullstack generator-gulp-angular && \
     rm -rf ~/.npm && npm cache clear
 
 # Set app dir
