@@ -33,9 +33,9 @@ Run **alexagency/angular-yeoman** container from [Docker Hub](https://hub.docker
 docker run -it --rm -p 9000:9000 -p 3000:3000 -p 3001:3001 -v $(pwd)/angular:/app alexagency/angular-yeoman
 ```
 
-Initiate one of Yeoman generators:
+#### Initiate one of Yeoman generators:
 
-[AngularJS Oficial generator](https://github.com/yeoman/generator-angular):
+[AngularJS official generator](https://github.com/yeoman/generator-angular):
 ```
 yo angular
 ```
@@ -61,7 +61,7 @@ Check generated project:
 /c/Users/<WINDOWS USER>/angular
 ```
 
-Build:
+#### Build:
 
 AngularJS Oficial, AngularJS Full-Stack and ngBoilerplate:
 ```
